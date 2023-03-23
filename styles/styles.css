@@ -113,7 +113,18 @@ ul {
   color: rgb(77, 77, 77);
   font-size: 2rem;
   font-weight: 700;
-  
 }
 
+@media (max-width: 48rem) {
+  #main-nav {
+    visibility: hidden;
+  }
 
+  #latest-products ul {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
