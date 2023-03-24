@@ -4,8 +4,16 @@
 
 body {
   background-color: rgb(44, 41, 38);
-  height: 100vh;
   margin: 0;
+}
+
+header {
+  height: 5rem;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 0px 5%;
+  display: flex;
 }
 
 h1 {
@@ -26,6 +34,12 @@ ul {
   display: flex;
 }
 
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 200, "opsz" 48;
+  color: white;
+  font-size: 3rem;
+}
+
 .btn {
   color: white;
   background-color: rgb(228, 157, 44);
@@ -37,16 +51,11 @@ ul {
   background-color: rgb(255, 186, 57);
 }
 
+/* HEADER */
+
 #main-header {
   background-color: rgb(29, 26, 24);
-  height: 5rem;
-  width: 100%;
-  display: flex;
   justify-content: space-between;
-  box-sizing: border-box;
-  align-items: center;
-  padding: 0px 5%;
-  margin-bottom: 30px;
   box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.2);
 }
 
@@ -56,11 +65,9 @@ ul {
   font-weight: 700;
   text-transform: uppercase;
   display: flex;
-  vertical-align: middle;
 }
 
 #main-nav ul {
-  width: 300px;
   display: flex;
   justify-content: flex-end;
   margin: auto 0;
@@ -77,6 +84,64 @@ ul {
 
 #main-nav a:hover {
   color: rgb(238, 164, 80);
+}
+
+.menu-btn {
+  display: none;
+
+}
+
+
+/* SIDE DRAWER */
+
+#side-drawer {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(29, 26, 27, 0.9);
+  display: none;
+}
+
+#side-drawer:target {
+  display: block;
+  position: fixed;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+}
+
+#side-drawer header {
+  justify-content: flex-end;
+}
+
+#side-drawer nav {
+  padding: 1.25rem;
+}
+
+#side-drawer ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+#side-drawer li {
+  margin-bottom: 2rem;
+}
+
+#side-drawer a {
+  font-size: 1.25rem;
+  color: rgb(253, 239, 213);
+  text-transform: uppercase;
+}
+
+#side-drawer a:hover {
+  color: rgb(238, 164, 80);
+}
+
+/* MAIN */
+
+main {
+  margin-top: 3rem;
 }
 
 #latest-products {
@@ -104,6 +169,11 @@ ul {
   object-fit: cover;
 }
 
+.food-item h2 {
+  margin: 0 0 1rem 0;
+}
+
+
 .item-content {
   min-height: 25%;
   padding: 1rem;
@@ -115,9 +185,15 @@ ul {
   font-weight: 700;
 }
 
+/* MEDIA QUERY */
+
 @media (max-width: 48rem) {
   #main-nav {
-    visibility: hidden;
+    display: none;
+  }
+
+  .menu-btn {
+    display: flex;
   }
 
   #latest-products ul {
